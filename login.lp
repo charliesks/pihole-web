@@ -14,9 +14,9 @@ mg.include('scripts/lua/header.lp','r')
     <section style="padding: 15px;">
         <div class="login-logo">
             <div class="text-center">
-                <img src="<?=webhome?>img/logo.svg" alt="Pi-hole logo" class="loginpage-logo" width="140" height="202">
+                <img src="<?=webhome?>img/logo.svg" alt="Pi-hole logo" class="loginpage-logo" style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
             </div>
-            <div class="panel-title text-center"><span class="logo-lg" style="font-size: 25px;">Pi-<b>hole</b></span></div>
+            <div class="panel-title text-center"><span class="logo-lg" style="font-size: 25px;"><b>Sinkhole</b></span></div>
         </div>
         <!-- /.login-logo -->
 
@@ -105,18 +105,13 @@ mg.include('scripts/lua/header.lp','r')
             <!-- /.login-card-body -->
             <div class="login-footer" style="margin-top: 15px; display: flex; justify-content: space-between;">
                 <a class="btn btn-default btn-sm" role="button" href="https://docs.pi-hole.net/" rel="noopener" target="_blank"><i class="fas fa-question-circle"></i> Documentation</a>
-                <a class="btn btn-default btn-sm" role="button" href="https://github.com/pi-hole/" rel="noopener" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a class="btn btn-default btn-sm" role="button" href="https://github.com/charliesks/pi-hole/" rel="noopener" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a class="btn btn-default btn-sm" role="button" href="https://discourse.pi-hole.net/" rel="noopener" target="_blank"><i class="fab fa-discourse"></i> Pi-hole Discourse</a>
             </div>
         </div>
     </section>
 </div>
 
-<div class="login-donate">
-    <div class="text-center" style="font-size:125%">
-        <strong><a href="https://pi-hole.net/donate/" rel="noopener" target="_blank"><i class="fa fa-heart text-red"></i> Donate</a></strong> if you found this useful.
-    </div>
-</div>
 <script defer src="<?=pihole.fileversion('scripts/js/footer.js')?>"></script>
 <script defer src="<?=pihole.fileversion('scripts/js/login.js')?>"></script>
 </body>
