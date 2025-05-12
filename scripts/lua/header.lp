@@ -51,7 +51,7 @@ is_authenticated = mg.request_info.is_authenticated
     <meta http-equiv="x-dns-prefetch-control" content="off">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Pi-hole <?=hostname?></title>
+    <title>SARKS Sink-hole <?=hostname?></title>
 
     <meta name="csrf-token" content="<?=mg.request_info.csrf_token?>">
 
