@@ -43,7 +43,7 @@ mg.include('header.lp','r')
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini">P<strong>h</strong></span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg">Pi-<strong>hole</strong></span>
+            <span class="logo-lg"><strong>Sinkhole</strong></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -69,16 +69,16 @@ mg.include('header.lp','r')
                             <li class="user-header">
                                 <img class="logo-img" src="<?=webhome?>img/logo.svg" alt="Pi-hole Logo" width="50" height="50">
                                 <p>
-                                    Open Source Ad Blocker
+                                    ByblosVista Ad Blocker
                                 </p>
                             </li>
                             <!-- Menu Body -->
                             <li class="user-body" id="advanced-info" style="display:none;"></li>
                             <!-- Menu Footer -->
                             <li class="user-footer">
-                                <a class="btn-link" href="https://pi-hole.net/" rel="noopener noreferrer" target="_blank">
+                                <a class="btn-link" href="https://byblosvista.com/" rel="noopener noreferrer" target="_blank">
                                     <? mg.include('../../img/logo-bw.svg', 'r') ?>
-                                    Pi-hole Website
+                                    ByblosVista Website
                                 </a>
                                 <a class="btn-link" href="https://docs.pi-hole.net/" rel="noopener noreferrer" target="_blank"><i class="fa-fw menu-icon fa-solid fa-circle-question"></i> Documentation</a>
                                 <a class="btn-link" href="https://discourse.pi-hole.net/" rel="noopener noreferrer" target="_blank"><i class="fa-fw menu-icon fab fa-discourse"></i> Pi-hole Discourse</a>
