@@ -254,14 +254,6 @@
                         </li>
                     </ul>
                 </li>
-
-                <!-- Donate button -->
-                <li class="header text-uppercase">Donate</li>
-                <li class="menu-donate">
-                    <a href="https://pi-hole.net/donate/" rel="noopener noreferrer" target="_blank">
-                        <i class="fas fa-fw menu-icon fa-donate"></i> <span>Donate</span>
-                    </a>
-                </li>
             </ul>
         </section>
         <!-- /.sidebar -->
