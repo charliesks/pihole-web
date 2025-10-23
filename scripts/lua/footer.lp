@@ -50,6 +50,12 @@ end
     </div> <!-- /.content-wrapper -->
 
     <footer class="main-footer">
+        <div class="row row-centered text-center">
+            <div class="col-xs-12 col-sm-6">
+            <strong><a href="" target="_blank"><i class="fa fa-circle text-green"></i> Main Sinkhole</a></strong>
+            </div>
+        </div>
+
         <div class="row row-centered text-center version-info">
             <div class="col-xs-12 col-sm-12 col-md-10">
                 <ul class="list-inline" id="versions"></ul>
