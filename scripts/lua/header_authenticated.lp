@@ -41,7 +41,7 @@ mg.include('header.lp','r')
         <!-- Logo -->
         <a href="<?=webhome?>" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini">P<strong>h</strong></span>
+            <span class="logo-mini">B<strong>V</strong></span>
             <!-- logo for regular state and mobile devices -->
             <span class="logo-lg"><strong>ByblosVista Sinkhole</strong></span>
         </a>

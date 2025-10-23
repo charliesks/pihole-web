@@ -16,7 +16,7 @@ mg.include('scripts/lua/header.lp','r')
             <div class="text-center">
                 <img src="<?=webhome?>img/logo.svg" alt="Pi-hole logo" class="loginpage-logo" width="140" height="202">
             </div>
-            <div class="panel-title text-center"><span class="logo-lg" style="font-size: 25px;">Pi-<b>hole</b></span></div>
+            <div class="panel-title text-center"><span class="logo-lg" style="font-size: 25px;"><b>Sinkhole</b></span></div>
         </div>
         <!-- /.login-logo -->
 
@@ -24,7 +24,7 @@ mg.include('scripts/lua/header.lp','r')
             <div class="card-body login-card-body">
                 <div id="cookieInfo" class="panel-title text-center text-red" style="font-size: 150%" hidden>Verify that cookies are allowed</div>
                 <div class="text-center form-group has-error" id="dns-failure-label" style="display: none;">
-                    <label>DNS Server failure detected, log in to see Pi-hole diagnosis messages</label>
+                    <label>DNS Server failure detected, log in to see diagnosis messages</label>
                 </div>
                 <div class="text-center form-group has-warning" id="insecure-box" style="display: none;">
                     <div class="box box-warning">
@@ -55,7 +55,7 @@ mg.include('scripts/lua/header.lp','r')
                         <span class="fa fa-clock-rotate-left pwd-field form-control-feedback"></span>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary form-control"><i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;&nbsp;Log in (uses cookie)</button>
+                        <button type="submit" class="btn btn-primary form-control"><i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;&nbsp;Log in</button>
                     </div>
                 </form>
                 <br>
@@ -71,7 +71,7 @@ mg.include('scripts/lua/header.lp','r')
                                 </div>
                             </div>
                             <div class="box-body">
-                                <p>Your Pi-hole has two-factor authentication enabled. You have to
+                                <p>Your Sinkhole has two-factor authentication enabled. You have to
                                     enter a valid <a href="https://en.wikipedia.org/wiki/Time-based_One-time_Password_algorithm" rel="noopener noreferrer" target="_blank">TOTP</a>
                                     token in addition to your password. You see this message because your
                                     token was incorrect or has already expired.</p>
@@ -91,32 +91,19 @@ mg.include('scripts/lua/header.lp','r')
                                 </div>
                             </div>
                             <div class="box-body" style="display: none;">
-                                <p>After installing Pi-hole for the first time, a password is generated and displayed
-                                    to the user. The password cannot be retrieved later on, but it is possible to set
-                                    a new password (or explicitly disable the password by setting an empty password)
-                                    using the command
+                                <p>The password cannot be retrieved, but it is possible to set a new password.
                                 </p>
-                                <pre>pihole setpassword</pre>
+                                <pre>Contact developer for support</pre>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- /.login-card-body -->
-            <div class="login-footer" style="margin-top: 15px; display: flex; justify-content: space-between;">
-                <a class="btn btn-default btn-sm" role="button" href="https://docs.pi-hole.net/" rel="noopener noreferrer" target="_blank"><i class="fas fa-question-circle"></i> Documentation</a>
-                <a class="btn btn-default btn-sm" role="button" href="https://github.com/pi-hole/" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a class="btn btn-default btn-sm" role="button" href="https://discourse.pi-hole.net/" rel="noopener noreferrer" target="_blank"><i class="fab fa-discourse"></i> Pi-hole Discourse</a>
-            </div>
         </div>
     </section>
 </div>
 
-<div class="login-donate">
-    <div class="text-center" style="font-size:125%">
-        <strong><a href="https://pi-hole.net/donate/" rel="noopener noreferrer" target="_blank"><i class="fa fa-heart text-red"></i> Donate</a></strong> if you found this useful.
-    </div>
-</div>
 <script src="<?=pihole.fileversion('scripts/js/footer.js')?>"></script>
 <script src="<?=pihole.fileversion('scripts/js/login.js')?>"></script>
 </body>
