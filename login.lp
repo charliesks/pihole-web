@@ -106,7 +106,7 @@ mg.include('scripts/lua/header.lp','r')
 
 <div class="login-donate">
     <div class="text-center" style="font-size:125%">
-        <strong><a><i class="fa fa-circle text-Green"></i> Main Sinkhole</a></strong>
+        <strong><a><i class="fa fa-circle text-Yellow"></i> Backup Sinkhole</a></strong>
     </div>
 </div>
 <script src="<?=pihole.fileversion('scripts/js/footer.js')?>"></script>
