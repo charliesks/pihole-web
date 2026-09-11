@@ -9,14 +9,29 @@
 *  https://github.com/anvyst/adminlte-skin-midnight */
 
 :root {
-  --datatable-bgcolor: rgba(64, 76, 88, 0.8);
+  --datatable-bgcolor: rgba(44, 44, 46, 0.85);
   --overlay-bgcolor: var(--datatable-bgcolor);
 
   /* Dashboard graphic bars */
-  --allowed-color: #12b660;
-  --blocked-color: #822d21;
-  --cached-color: #44649c;
-  --other-color: #969798;
+  --allowed-color: #30d158;
+  --blocked-color: #ff453a;
+  --cached-color: #64d2ff;
+  --other-color: #8e8e93;
+
+  --bv-bg: #000000;
+  --bv-surface: #1c1c1e;
+  --bv-surface-secondary: #2c2c2e;
+  --bv-text: #f5f5f7;
+  --bv-text-secondary: #98989d;
+  --bv-label: #8e8e93;
+  --bv-separator: rgba(84, 84, 88, 0.65);
+  --bv-accent: #0a84ff;
+  --bv-accent-hover: #409cff;
+  --bv-fill: rgba(120, 120, 128, 0.36);
+  --bv-sidebar: #1c1c1e;
+  --bv-sidebar-text: #f5f5f7;
+  --bv-sidebar-muted: #98989d;
+  --bv-nav: rgba(28, 28, 30, 0.92);
 }
 
 /* fix #2554: browser not detecting dark mode */
@@ -25,11 +40,11 @@ html {
 }
 
 body {
-  background-color: #353c42;
-  color: #bec5cb;
+  background-color: #000000;
+  color: #f5f5f7;
 }
 h4 {
-  color: #44def1;
+  color: #f5f5f7;
 }
 .callout h4 {
   color: inherit;
@@ -269,7 +284,7 @@ h4 {
 }
 .content-wrapper,
 .right-side {
-  background-color: #353c42;
+  background-color: #000000;
 }
 .main-footer,
 .nav-tabs-custom {
@@ -353,7 +368,7 @@ h4 {
 }
 
 .layout-boxed {
-  background: url("../../img/boxed-bg-dark.png") repeat fixed;
+  background: #000;
 }
 .not-used {
   background-color: #eee;
@@ -627,7 +642,8 @@ input[type="password"]::-webkit-caps-lock-indicator {
 }
 
 .login-page {
-  background-image: linear-gradient(#0006, #0006), url("../../img/boxed-bg-dark.png");
+  background-image: none;
+  background-color: #000;
 }
 
 /*** Fix login input visual misalignment ***/

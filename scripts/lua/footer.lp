@@ -52,7 +52,7 @@ end
     <footer class="main-footer">
         <div class="row row-centered text-center">
             <div class="col-xs-12 col-sm-6">
-            <strong><a><i class="fa fa-circle text-yellow"></i> Backup Sinkhole</a></strong>
+            <span class="footer-caption"><i class="fa fa-circle" aria-hidden="true"></i> Backup Sinkhole</span>
             </div>
         </div>
 

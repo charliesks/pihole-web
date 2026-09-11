@@ -123,6 +123,10 @@ is_authenticated = mg.request_info.is_authenticated
 <? if theme.name == "default-auto" then ?>
     <link rel="stylesheet" href="<?=pihole.fileversion('style/themes/default-dark.css')?>" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="<?=pihole.fileversion('style/themes/default-light.css')?>" media="not (prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="<?=pihole.fileversion('style/themes/apple-ui.css')?>">
+<? elseif theme.name == "default-light" or theme.name == "default-dark" then ?>
+    <link rel="stylesheet" href="<?=pihole.fileversion('style/themes/' ..theme.name.. '.css')?>">
+    <link rel="stylesheet" href="<?=pihole.fileversion('style/themes/apple-ui.css')?>">
 <? else ?>
     <link rel="stylesheet" href="<?=pihole.fileversion('style/themes/' ..theme.name.. '.css')?>">
 <? end ?>

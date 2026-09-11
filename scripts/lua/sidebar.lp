@@ -255,19 +255,9 @@
                     </ul>
                 </li>
             </ul>
-            <div style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 8px;
-                width: 100%;
-                margin-top: 18px;
-                color: #ffffff;
-                font-size: 17px;
-                font-weight: 700;
-            ">
-                <i class="fa fa-circle text-yellow" aria-hidden="true"></i>
-                <span style="color: #ffffff;">Backup Sinkhole</span>
+            <div class="sidebar-caption">
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <span>Backup Sinkhole</span>
             </div>
         </section>
         <!-- /.sidebar -->
