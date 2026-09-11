@@ -266,8 +266,8 @@
                 font-size: 17px;
                 font-weight: 700;
             ">
-                <i class="fa fa-circle text-green" aria-hidden="true"></i>
-                <span style="color: #ffffff;">Main Sinkhole</span>
+                <i class="fa fa-circle text-yellow" aria-hidden="true"></i>
+                <span style="color: #ffffff;">Backup Sinkhole</span>
             </div>
         </section>
         <!-- /.sidebar -->
