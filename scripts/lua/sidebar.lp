@@ -257,7 +257,7 @@
             </ul>
             <div class="sidebar-caption">
                 <i class="fa fa-circle" aria-hidden="true"></i>
-                <span>Backup Sinkhole</span>
+                <span>Main Sinkhole</span>
             </div>
         </section>
         <!-- /.sidebar -->
