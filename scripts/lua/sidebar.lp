@@ -255,9 +255,22 @@
                     </ul>
                 </li>
             </ul>
-            <div class="sinkhole-role" style="margin-top: 8px;">
-                <i class="fa fa-circle text-green"></i>
-                <strong>Main Sinkhole</strong>
+            <div style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                width: 100%;
+                margin-top: 18px;
+                color: #ffffff;
+                font-size: 17px;
+                font-weight: 700;
+            ">
+                <i class="fa fa-circle text-green" aria-hidden="true"></i>
+                <span style="color: #ffffff;">Main Sinkhole</span>
+            </div>
+            <div style="display:flex;justify-content:center;align-items:center;gap:8px;width:100%;margin-top:18px;color:#FFD700;font-size:17px;font-weight:700;">
+            <i class="fa fa-circle" style="color:#FFD700;" aria-hidden="true"></i><span>Backup Sinkhole</span>
             </div>
         </section>
         <!-- /.sidebar -->
