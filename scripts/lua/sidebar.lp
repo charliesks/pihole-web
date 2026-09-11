@@ -256,8 +256,8 @@
                 </li>
             </ul>
             <div class="sinkhole-role" style="margin-top: 8px;">
-                <i class="fa fa-circle text-yellow"></i>
-                <strong>Backup Sinkhole</strong>
+                <i class="fa fa-circle text-green"></i>
+                <strong>Main Sinkhole</strong>
             </div>
         </section>
         <!-- /.sidebar -->
