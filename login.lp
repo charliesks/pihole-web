@@ -20,7 +20,7 @@ mg.include('scripts/lua/header.lp','r')
         </div>
         <!-- /.login-logo -->
 
-        <div class="card">
+        <div class="card vista-glow">
             <div class="card-body login-card-body">
                 <div id="cookieInfo" class="panel-title text-center text-red" style="font-size: 150%" hidden>Verify that cookies are allowed</div>
                 <div class="text-center form-group has-error" id="dns-failure-label" style="display: none;">
