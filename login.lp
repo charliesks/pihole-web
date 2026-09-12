@@ -10,7 +10,7 @@
 mg.include('scripts/lua/header.lp','r')
 ?>
 <body class="hold-transition layout-boxed login-page page-<?=pihole.format_path(mg.request_info.request_uri)?>" data-apiurl="<?=pihole.api_url()?>" data-webhome="<?=webhome?>">
-<div class="box login-box" id="login-box">
+<div class="box login-box" vista-glow id="login-box">
     <section>
         <div class="login-logo">
             <div class="text-center">
@@ -20,7 +20,7 @@ mg.include('scripts/lua/header.lp','r')
         </div>
         <!-- /.login-logo -->
 
-        <div class="card vista-glow">
+        <div class="card">
             <div class="card-body login-card-body">
                 <div id="cookieInfo" class="panel-title text-center text-red" style="font-size: 150%" hidden>Verify that cookies are allowed</div>
                 <div class="text-center form-group has-error" id="dns-failure-label" style="display: none;">
