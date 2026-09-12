@@ -10,7 +10,7 @@
 mg.include('scripts/lua/header.lp','r')
 ?>
 <body class="hold-transition layout-boxed login-page page-<?=pihole.format_path(mg.request_info.request_uri)?>" data-apiurl="<?=pihole.api_url()?>" data-webhome="<?=webhome?>">
-<div class="box login-box" vista-glow id="login-box">
+<div class="box login-box vista-glow" id="login-box">
     <section>
         <div class="login-logo">
             <div class="text-center">
