@@ -1580,7 +1580,55 @@ textarea.field-sizing-content {
   font-size: 1.7em;
 }
 
+/* Align the password input and eye button */
+#pw-field .pwd-field {
+  display: flex !important;
+  align-items: stretch !important;
+  width: 100%;
+}
 
+/* Password input occupies the remaining width */
+#pw-field .pwd-field > input.form-control {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: auto;
+  border-radius: 11px 0 0 11px !important;
+}
+
+/* Eye-button container stretches to the input height */
+#pw-field .pwd-field > .input-group-btn {
+  display: flex !important;
+  align-items: stretch !important;
+  flex: 0 0 58px;
+  width: 58px;
+}
+
+/* Eye button matches the password input */
+#toggle-password {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px !important;
+  height: auto !important;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  color: #222222;
+  background: #f3f3f7 !important;
+  border: 0 !important;
+  border-left: 1px solid rgba(0, 0, 0, 0.04) !important;
+  border-radius: 0 11px 11px 0 !important;
+  box-shadow: none !important;
+}
+
+/* Consistent eye icon size */
+#toggle-password .field-icon {
+  width: auto;
+  font-size: 18px;
+  line-height: 1;
+}
 
 /* All Box is colored*/
 /* White login panel above the glow layers 
@@ -1761,8 +1809,8 @@ textarea.field-sizing-content {
   ) !important;
 
   animation:
-      vista-glow-rotate 3s linear infinite,
-      vista-glow-pulse 1.5s ease-in-out infinite alternate;
+      vista-glow-rotate 10s linear infinite,
+      vista-glow-pulse 4s ease-in-out infinite alternate;
 }
 
 /* White center covering the gradient */
@@ -1812,4 +1860,57 @@ textarea.field-sizing-content {
   #login-box.vista-glow {
       animation: none;
   }
+}
+
+/* Static logo-gradient login button */
+#loginform .btn.btn-primary[type="submit"] {
+  color: #ffffff !important;
+  background-color: transparent !important;
+  background-image: linear-gradient(
+      110deg,
+      #079fc5 0%,
+      #29c4bd 35%,
+      #77cf68 70%,
+      #b4dc3d 100%
+  ) !important;
+
+  border: none !important;
+  border-radius: 11px;
+
+  box-shadow:
+      0 0 8px rgba(7, 159, 197, 0.40),
+      0 0 15px rgba(41, 196, 189, 0.30),
+      0 0 22px rgba(119, 207, 104, 0.22);
+
+  font-weight: 600;
+  transition:
+      filter 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.1s ease;
+}
+
+/* Slightly brighter when hovering or using the keyboard */
+#loginform .btn.btn-primary[type="submit"]:hover,
+#loginform .btn.btn-primary[type="submit"]:focus {
+  color: #ffffff !important;
+  background-image: linear-gradient(
+      110deg,
+      #079fc5 0%,
+      #29c4bd 35%,
+      #77cf68 70%,
+      #b4dc3d 100%
+  ) !important;
+
+  filter: brightness(1.08);
+
+  box-shadow:
+      0 0 10px rgba(7, 159, 197, 0.55),
+      0 0 19px rgba(41, 196, 189, 0.42),
+      0 0 27px rgba(119, 207, 104, 0.30);
+}
+
+/* Button press effect */
+#loginform .btn.btn-primary[type="submit"]:active {
+  transform: translateY(1px);
+  filter: brightness(0.96);
 }
