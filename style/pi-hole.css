@@ -1580,6 +1580,9 @@ textarea.field-sizing-content {
   font-size: 1.7em;
 }
 
+
+
+/* All Box is colored*/
 /* White login panel above the glow layers 
 #login-box.vista-glow {
   position: relative;
@@ -1662,7 +1665,9 @@ textarea.field-sizing-content {
   }
 }*/
 
-/* Animated gradient exists only behind the white section */
+
+/* Corrent glow but no shimmering*/
+/* Animated gradient exists only behind the white section 
 #login-box.vista-glow {
   box-sizing: border-box;
   padding: 3px !important;
@@ -1689,7 +1694,7 @@ textarea.field-sizing-content {
       drop-shadow(0 0 11px rgba(119, 207, 104, 0.24));
 }
 
-/* White layer covers the center, leaving only the 3px edge visible */
+/* White layer covers the center, leaving only the 3px edge visible 
 #login-box.vista-glow > section {
   display: block;
   width: 100%;
@@ -1700,7 +1705,7 @@ textarea.field-sizing-content {
   border-radius: 18px;
 }
 
-/* Ensure nested login sections remain white */
+/* Ensure nested login sections remain white 
 #login-box.vista-glow .login-logo,
 #login-box.vista-glow .card,
 #login-box.vista-glow .login-card-body {
@@ -1718,6 +1723,88 @@ textarea.field-sizing-content {
 
   100% {
       background-position: 0% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #login-box.vista-glow {
+      animation: none;
+  }
+}*/
+
+@property --vista-glow-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+#login-box.vista-glow {
+  --vista-glow-angle: 0deg;
+
+  box-sizing: border-box;
+  padding: 4px !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 22px;
+
+  background: conic-gradient(
+      from var(--vista-glow-angle),
+      #079fc5 0deg,
+      #29c4bd 70deg,
+      #77cf68 135deg,
+      #b4dc3d 180deg,
+      #ffffff 205deg,
+      #b4dc3d 225deg,
+      #77cf68 270deg,
+      #29c4bd 320deg,
+      #079fc5 360deg
+  ) !important;
+
+  animation:
+      vista-glow-rotate 3s linear infinite,
+      vista-glow-pulse 1.5s ease-in-out infinite alternate;
+}
+
+/* White center covering the gradient */
+#login-box.vista-glow > section {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  background: #ffffff !important;
+  border-radius: 18px;
+}
+
+#login-box.vista-glow .login-logo,
+#login-box.vista-glow .card,
+#login-box.vista-glow .login-card-body {
+  background-color: #ffffff;
+}
+
+/* Move the colors continuously around the edges */
+@keyframes vista-glow-rotate {
+  from {
+      --vista-glow-angle: 0deg;
+  }
+
+  to {
+      --vista-glow-angle: 360deg;
+  }
+}
+
+/* Make the exterior glow softly breathe */
+@keyframes vista-glow-pulse {
+  from {
+      filter:
+          drop-shadow(0 0 6px rgba(7, 159, 197, 0.30))
+          drop-shadow(0 0 10px rgba(119, 207, 104, 0.22));
+  }
+
+  to {
+      filter:
+          drop-shadow(0 0 12px rgba(7, 159, 197, 0.60))
+          drop-shadow(0 0 20px rgba(119, 207, 104, 0.45));
   }
 }
 
