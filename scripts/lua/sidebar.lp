@@ -258,8 +258,10 @@
             <div class="sidebar-caption">
                 <!--<i class="fa fa-circle" style="color:#7CFC00;" aria-hidden="true"></i>-->
                 <!--<span>Main Sinkhole</span>-->
-                <i class="fa fa-circle sinkhole-indicator" aria-hidden="true"></i>
+                <!--<i class="fa fa-circle sinkhole-indicator" aria-hidden="true"></i>
                 <span>Main Sinkhole</span>
+                <i class="fa fa-circle sinkhole-indicator backup-indicator" aria-hidden="true"></i>
+                <span>Backup Sinkhole</span>-->
             </div>
         </section>
         <!-- /.sidebar -->

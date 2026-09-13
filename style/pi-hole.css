@@ -1948,6 +1948,7 @@ textarea.field-sizing-content {
       drop-shadow(0 0 8px rgba(119, 207, 104, 0.65));
 }*/
 /* Alignment for login/footer and sidebar captions */
+
 .footer-caption,
 .sidebar-caption {
     display: inline-flex;
@@ -1990,4 +1991,28 @@ textarea.field-sizing-content {
         0 0 5px rgba(7, 159, 197, 0.75),
         0 0 9px rgba(41, 196, 189, 0.60),
         0 0 14px rgba(119, 207, 104, 0.45);
+}
+
+/* Yellow/orange backup-state indicator */
+.footer-caption .backup-indicator,
+.main-sidebar .sidebar-caption .backup-indicator {
+    background: linear-gradient(
+        135deg,
+        #ff9800 0%,
+        #ffb300 30%,
+        #ffd740 65%,
+        #fff176 100%
+    ) !important;
+
+    box-shadow:
+        0 0 5px rgba(255, 152, 0, 0.80),
+        0 0 10px rgba(255, 193, 7, 0.65),
+        0 0 16px rgba(255, 215, 64, 0.48) !important;
+}
+
+/* Optional matching label colour */
+.footer-caption:has(.backup-indicator) > span,
+.sidebar-caption:has(.backup-indicator) > span {
+    color: #e6a700;
+    font-weight: 600;
 }

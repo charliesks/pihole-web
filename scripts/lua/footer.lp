@@ -53,9 +53,13 @@ end
         <div class="row row-centered text-center">
             <div class="col-xs-12 col-sm-6">
             <!--<span class="footer-caption"><i class="fa fa-circle" aria-hidden="true" style="color:#7CFC00;"></i> Main Sinkhole</span>-->
-            <span class="footer-caption">
+            <!--<span class="footer-caption">
                 <i class="fa fa-circle sinkhole-indicator" aria-hidden="true"></i>
                 <span>Main Sinkhole</span>
+            </span>-->
+            <span class="footer-caption">
+                <i class="fa fa-circle sinkhole-indicator backup-indicator" aria-hidden="true"></i>
+                <span>Backup Sinkhole</span>
             </span>
             </div>
         </div>
