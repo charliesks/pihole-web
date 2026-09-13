@@ -1922,7 +1922,7 @@ textarea.field-sizing-content {
   gap: 12px;
 }
 
-/* Larger gradient circle with static glow */
+/* Larger gradient circle with static glow
 .footer-caption .sinkhole-indicator {
   display: inline-block;
   margin: 0;
@@ -1946,4 +1946,48 @@ textarea.field-sizing-content {
   filter:
       drop-shadow(0 0 4px rgba(7, 159, 197, 0.75))
       drop-shadow(0 0 8px rgba(119, 207, 104, 0.65));
+}*/
+/* Alignment for login/footer and sidebar captions */
+.footer-caption,
+.sidebar-caption {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Center the sidebar caption across the sidebar width */
+.main-sidebar .sidebar-caption {
+    width: 100%;
+    margin-top: 20px;
+    padding: 8px 12px;
+}
+
+/* Gradient glowing status circle in all locations */
+.footer-caption .sinkhole-indicator,
+.main-sidebar .sidebar-caption .sinkhole-indicator {
+    display: inline-block !important;
+    flex: 0 0 15px;
+    width: 15px !important;
+    height: 15px !important;
+    margin: 0 !important;
+
+    font-size: 0 !important;
+    color: transparent !important;
+
+    background: linear-gradient(
+        135deg,
+        #079fc5 0%,
+        #29c4bd 38%,
+        #77cf68 70%,
+        #b4dc3d 100%
+    ) !important;
+
+    border: 0;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 5px rgba(7, 159, 197, 0.75),
+        0 0 9px rgba(41, 196, 189, 0.60),
+        0 0 14px rgba(119, 207, 104, 0.45);
 }
