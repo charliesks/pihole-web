@@ -2016,3 +2016,26 @@ textarea.field-sizing-content {
     color: #e6a700;
     font-weight: 600;
 }
+
+/* Full green/lime main-state indicator */
+.footer-caption .main-indicator,
+.main-sidebar .sidebar-caption .main-indicator {
+    background: linear-gradient(
+        135deg,
+        #00a65a 0%,
+        #20c96b 30%,
+        #62e650 65%,
+        #9bea45 100%
+    ) !important;
+
+    box-shadow:
+        0 0 5px rgba(0, 166, 90, 0.80),
+        0 0 10px rgba(32, 201, 107, 0.65),
+        0 0 16px rgba(98, 230, 80, 0.48) !important;
+}
+
+/* Matching main-state text */
+.main-caption > span {
+    color: #27b85f;
+    font-weight: 600;
+}

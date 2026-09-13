@@ -111,10 +111,14 @@ mg.include('scripts/lua/header.lp','r')
             <i class="fa fa-circle sinkhole-indicator" aria-hidden="true"></i>
             <span>Main Sinkhole</span>
         </span>-->
-        <span class="footer-caption">
+        <span class="footer-caption main-caption">
+            <i class="fa fa-circle sinkhole-indicator main-indicator" aria-hidden="true"></i>
+            <span>Main Sinkhole</span>
+        </span>
+        <!--<span class="footer-caption">
             <i class="fa fa-circle sinkhole-indicator backup-indicator" aria-hidden="true"></i>
             <span>Backup Sinkhole</span>
-        </span>
+        </span>-->
     </div>
 </div>
 <script src="<?=pihole.fileversion('scripts/js/footer.js')?>"></script>
