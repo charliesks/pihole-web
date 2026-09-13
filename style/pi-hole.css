@@ -1914,3 +1914,36 @@ textarea.field-sizing-content {
   transform: translateY(1px);
   filter: brightness(0.96);
 }
+/* Main Sinkhole footer indicator */
+.footer-caption {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Larger gradient circle with static glow */
+.footer-caption .sinkhole-indicator {
+  display: inline-block;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1;
+
+  color: transparent !important;
+
+  background: linear-gradient(
+      135deg,
+      #079fc5 0%,
+      #29c4bd 38%,
+      #77cf68 70%,
+      #b4dc3d 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  filter:
+      drop-shadow(0 0 4px rgba(7, 159, 197, 0.75))
+      drop-shadow(0 0 8px rgba(119, 207, 104, 0.65));
+}
