@@ -2039,3 +2039,165 @@ textarea.field-sizing-content {
     color: #27b85f;
     font-weight: 600;
 }
+
+/* =========================================================
+   SARKS Sinkhole theme
+   ========================================================= */
+
+   :root {
+    --sarks-dark-red: #7a0000;
+    --sarks-red: #e10600;
+    --sarks-bright-red: #ff3030;
+    --sarks-coral: #ff6257;
+}
+
+/* Keep the SARKS logo proportionally sized */
+.loginpage-logo.sarks-login-logo {
+    display: block;
+    width: min(290px, 75%);
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* Login panel positioning */
+#login-box > section {
+    position: relative;
+    z-index: 0;
+    border-radius: 24px;
+    background: #ffffff;
+}
+
+/* Animated red gradient border */
+#login-box > section::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    inset: -7px;
+    padding: 7px;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        110deg,
+        var(--sarks-dark-red),
+        var(--sarks-red),
+        var(--sarks-coral),
+        var(--sarks-bright-red),
+        var(--sarks-dark-red)
+    );
+
+    background-size: 350% 350%;
+    animation: sarks-border-shimmer 12s linear infinite;
+
+    box-shadow:
+        0 0 12px rgba(225, 6, 0, 0.70),
+        0 0 28px rgba(255, 48, 48, 0.42),
+        0 0 48px rgba(122, 0, 0, 0.24);
+}
+
+/* White layer prevents the gradient entering the panel */
+#login-box > section::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: 24px;
+    background: #ffffff;
+}
+
+@keyframes sarks-border-shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Full gradient login button */
+#loginform button[type="submit"],
+#loginform .btn-primary {
+    color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 14px !important;
+
+    background: linear-gradient(
+        110deg,
+        var(--sarks-dark-red) 0%,
+        var(--sarks-red) 40%,
+        var(--sarks-bright-red) 72%,
+        var(--sarks-coral) 100%
+    ) !important;
+
+    box-shadow:
+        0 0 10px rgba(225, 6, 0, 0.60),
+        0 0 22px rgba(255, 48, 48, 0.32) !important;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        filter 180ms ease;
+}
+
+/* Button hover effect—no shimmer */
+#loginform button[type="submit"]:hover,
+#loginform .btn-primary:hover {
+    filter: brightness(1.12);
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 0 14px rgba(225, 6, 0, 0.78),
+        0 0 30px rgba(255, 48, 48, 0.46) !important;
+}
+
+#loginform button[type="submit"]:active,
+#loginform .btn-primary:active {
+    transform: translateY(1px);
+}
+
+/* SARKS status caption */
+.sarks-caption {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    color: var(--sarks-bright-red) !important;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Gradient status light */
+.sarks-caption .fa-circle {
+    color: transparent !important;
+    background: linear-gradient(
+        135deg,
+        var(--sarks-dark-red),
+        var(--sarks-red),
+        var(--sarks-coral)
+    );
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 8px rgba(225, 6, 0, 0.95),
+        0 0 18px rgba(255, 48, 48, 0.65);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    #login-box > section::before {
+        animation: none;
+    }
+
+    #loginform button[type="submit"] {
+        transition: none;
+    }
+}
