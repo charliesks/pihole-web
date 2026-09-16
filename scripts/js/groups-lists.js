@@ -519,7 +519,7 @@ function addList(event) {
   }
 
   $.ajax({
-    url: document.body.dataset.apiurl + "/lists",
+    url: document.body.dataset.apiurl + "/lists?type=" + encodeURIComponent(type),
     method: "post",
     dataType: "json",
     processData: false,
