@@ -2369,11 +2369,19 @@ body .main-sidebar .sidebar-caption.backup-caption > span {
     font-weight: 700 !important;
 }
 /* Sarks login logo animation */
+.sarks-login-logo,
+.sarks-sidebar-logo {
+    transform-origin: center center;
+    animation: sarks-logo-spin 18s linear infinite;
+    will-change: transform;
+}
+
 .sarks-login-logo {
-  display: inline-block;
-  animation: sarks-logo-spin 18s linear infinite;
-  transform-origin: center center;
-  will-change: transform;
+    display: inline-block;
+}
+
+.sarks-sidebar-logo {
+    display: block;
 }
 
 @keyframes sarks-logo-spin {
@@ -2387,7 +2395,8 @@ body .main-sidebar .sidebar-caption.backup-caption > span {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .sarks-login-logo {
+    .sarks-login-logo,
+    .sarks-sidebar-logo {
         animation: none;
     }
 }

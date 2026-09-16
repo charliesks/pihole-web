@@ -13,7 +13,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img class="logo-img" src="<?=webhome?>img/sarks-blackhole-2.png" alt="Pi-hole logo" width="60" height="87">
+                    <img class="logo-img sarks-sidebar-logo" src="<?=webhome?>img/sarks-blackhole-2.png" alt="Pi-hole logo" width="60" height="87">
                 </div>
                 <div class="pull-left info">
                     <p>Status</p>
