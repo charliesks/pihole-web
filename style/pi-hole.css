@@ -2372,7 +2372,7 @@ body .main-sidebar .sidebar-caption.backup-caption > span {
 .sarks-login-logo,
 .sarks-sidebar-logo {
     transform-origin: center center;
-    animation: sarks-logo-spin 18s linear infinite;
+    animation: sarks-logo-spin 15s linear infinite;
     will-change: transform;
 }
 
