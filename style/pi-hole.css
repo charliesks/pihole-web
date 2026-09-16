@@ -2290,3 +2290,26 @@ textarea.field-sizing-content {
   object-fit: contain;
   vertical-align: -4px;
 }
+/* Sarks authenticated-header logos */
+.user-menu .user-header .sarks-user-logo {
+  display: block;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 8px;
+  object-fit: contain;
+}
+
+.user-footer .sarks-website-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.user-footer .sarks-menu-icon {
+  display: inline-block;
+  flex: 0 0 19px;
+  width: 19px;
+  height: 19px;
+  margin: 0;
+  object-fit: contain;
+}
