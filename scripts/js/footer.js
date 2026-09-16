@@ -247,26 +247,52 @@ function updateFtlInfo() {
       $("#num_clients").text(intl.format(database.clients));
       $("#num_lists").text(intl.format(database.lists));
       $("#num_gravity").text(intl.format(database.gravity));
-      $("#num_allowed")
-        .text(intl.format(database.domains.allowed + (database.regex?.allowed ?? 0)))
-        .attr(
-          "title",
-          "Allowed: " +
-            intl.format(database.domains.allowed) +
-            " exact domains and " +
-            intl.format(intl.format(database.regex?.allowed ?? 0)) +
-            " regex filters are enabled"
-        );
-      $("#num_denied")
-        .text(intl.format(database.domains.denied + (database.regex?.denied ?? 0)))
-        .attr(
-          "title",
-          "Denied: " +
-            intl.format(database.domains.denied) +
-            " exact domains and " +
-            intl.format(database.regex?.denied ?? 0) +
-            " regex filters are enabled"
-        );
+      //$("#num_allowed")
+        //.text(intl.format(database.domains.allowed + (database.regex?.allowed ?? 0)))
+        //.attr(
+          //"title",
+          //"Allowed: " +
+            //intl.format(database.domains.allowed) +
+            //" exact domains and " +
+            //intl.format(intl.format(database.regex?.allowed ?? 0)) +
+            //" regex filters are enabled"
+        //);
+      //$("#num_denied")
+        //.text(intl.format(database.domains.denied + (database.regex?.denied ?? 0)))
+        //.attr(
+          //"title",
+          //"Denied: " +
+            //intl.format(database.domains.denied) +
+            //" exact domains and " +
+            //intl.format(database.regex?.denied ?? 0) +
+            //" regex filters are enabled"
+        //);
+        const allowedDomains = Number(database.domains.allowed.enabled ?? 0);
+        const deniedDomains = Number(database.domains.denied.enabled ?? 0);
+        const allowedRegex = Number(database.regex.allowed.enabled ?? 0);
+        const deniedRegex = Number(database.regex.denied.enabled ?? 0);
+        
+        $("#num_allowed")
+          .text(intl.format(allowedDomains + allowedRegex))
+          .attr(
+            "title",
+            "Allowed: " +
+              intl.format(allowedDomains) +
+              " exact domains and " +
+              intl.format(allowedRegex) +
+              " regex filters are enabled"
+          );
+        
+        $("#num_denied")
+          .text(intl.format(deniedDomains + deniedRegex))
+          .attr(
+            "title",
+            "Denied: " +
+              intl.format(deniedDomains) +
+              " exact domains and " +
+              intl.format(deniedRegex) +
+              " regex filters are enabled"
+          );
       updateQueryFrequency(intl, ftl.query_frequency);
       $("#sysinfo-cpu-ftl").text("(" + ftl["%cpu"].toFixed(1) + "% used by FTL)");
       $("#sysinfo-ram-ftl").text("(" + ftl["%mem"].toFixed(1) + "% used by FTL)");
