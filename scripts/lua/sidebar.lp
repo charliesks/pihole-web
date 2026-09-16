@@ -255,7 +255,7 @@
                     </ul>
                 </li>
             </ul>
-            <div class="sidebar-caption">
+            <div class="sidebar-caption main-caption">
                 <!--<i class="fa fa-circle" style="color:#7CFC00;" aria-hidden="true"></i>-->
                 <!--<span>Main Sinkhole</span>-->
                 <!--<i class="fa fa-circle sinkhole-indicator" aria-hidden="true"></i>
