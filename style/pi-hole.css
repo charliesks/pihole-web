@@ -2084,14 +2084,31 @@ textarea.field-sizing-content {
 
     background: conic-gradient(
         from var(--sarks-glow-angle),
-        #540000 0deg,
+        #520000 0deg,
+        #8d0000 45deg,
+        #d00000 95deg,
+        #ff3030 130deg,
+
+        /* Wider, more visible white shimmer */
+        #ff6257 145deg,
+        #ffaaa3 158deg,
+        #ffffff 174deg,
+        #ffffff 188deg,
+        #ffaaa3 202deg,
+        #ff6257 215deg,
+
+        #ff3030 230deg,
+        #c00000 275deg,
+        #780000 325deg,
+        #520000 360deg
+        /*#540000 0deg,
         #8d0000 55deg,
         #d00000 110deg,
         #ff3030 165deg,
         #ff9a93 195deg,
         #ff3030 225deg,
         #bd0000 290deg,
-        #540000 360deg
+        #540000 360deg*/
     ) !important;
 
     animation:
