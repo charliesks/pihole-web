@@ -261,7 +261,7 @@
                 <!--<i class="fa fa-circle sinkhole-indicator" aria-hidden="true"></i>
                 <span>Main Sinkhole</span>-->
                 <i class="fa fa-circle sinkhole-indicator main-indicator" aria-hidden="true"></i>
-                <span>Main Sinkhole</span>
+                <span>Backup Sinkhole</span>
                 <!--<i class="fa fa-circle sinkhole-indicator backup-indicator" aria-hidden="true"></i>
                 <span>Backup Sinkhole</span>-->
             </div>
