@@ -2244,3 +2244,140 @@ textarea.field-sizing-content {
         transition: none;
     }
 }
+
+/* =========================================================
+   Final SARKS login overrides
+   Keep at the end of pi-hole.css
+   ========================================================= */
+
+/* Symbol-only black-hole logo */
+.loginpage-logo.sarks-blackhole-logo {
+  display: block;
+  width: 150px;
+  height: auto;
+  max-height: 180px;
+  margin: 24px auto 22px;
+  padding: 0;
+  object-fit: contain;
+}
+
+/* Force red login button in its normal state */
+#login-box.sarks-glow
+#loginform .btn.btn-primary[type="submit"] {
+  color: #ffffff !important;
+
+  background-color: #c90000 !important;
+  background-image: linear-gradient(
+      110deg,
+      #680000 0%,
+      #ad0000 28%,
+      #e10600 55%,
+      #ff3030 78%,
+      #ff6257 100%
+  ) !important;
+
+  border: 0 !important;
+  border-radius: 12px !important;
+
+  box-shadow:
+      0 0 9px rgba(201, 0, 0, 0.60),
+      0 0 18px rgba(255, 48, 48, 0.38),
+      0 0 27px rgba(255, 98, 87, 0.22) !important;
+
+  font-weight: 700;
+
+  transition:
+      filter 180ms ease,
+      box-shadow 180ms ease,
+      transform 120ms ease;
+}
+
+/* Override the old Vista cyan/green hover */
+#login-box.sarks-glow
+#loginform .btn.btn-primary[type="submit"]:hover,
+#login-box.sarks-glow
+#loginform .btn.btn-primary[type="submit"]:focus {
+  color: #ffffff !important;
+
+  background-color: #e10600 !important;
+  background-image: linear-gradient(
+      110deg,
+      #7a0000 0%,
+      #c00000 28%,
+      #f00000 58%,
+      #ff3b34 80%,
+      #ff746b 100%
+  ) !important;
+
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+
+  box-shadow:
+      0 0 13px rgba(201, 0, 0, 0.82),
+      0 0 25px rgba(255, 48, 48, 0.55),
+      0 0 35px rgba(255, 98, 87, 0.32) !important;
+}
+
+/* Keep it red while pressed */
+#login-box.sarks-glow
+#loginform .btn.btn-primary[type="submit"]:active {
+  color: #ffffff !important;
+
+  background-color: #b00000 !important;
+  background-image: linear-gradient(
+      110deg,
+      #570000 0%,
+      #a00000 35%,
+      #d90000 68%,
+      #ff3030 100%
+  ) !important;
+
+  filter: brightness(0.96);
+  transform: translateY(1px);
+}
+
+/* Main Sinkhole caption alignment */
+.footer-caption.sarks-main-caption {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  color: #e10600 !important;
+  font-weight: 700;
+}
+
+/* Red Main Sinkhole indicator */
+.footer-caption.sarks-main-caption .sarks-main-indicator {
+  display: inline-block !important;
+  flex: 0 0 16px;
+
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 !important;
+
+  color: transparent !important;
+  font-size: 0 !important;
+
+  background: linear-gradient(
+      135deg,
+      #680000 0%,
+      #c90000 40%,
+      #ff3030 72%,
+      #ff6257 100%
+  ) !important;
+
+  border: 0 !important;
+  border-radius: 50%;
+
+  box-shadow:
+      0 0 7px rgba(201, 0, 0, 0.95),
+      0 0 14px rgba(255, 48, 48, 0.72),
+      0 0 22px rgba(255, 98, 87, 0.46) !important;
+}
+
+/* Red Main Sinkhole wording */
+.footer-caption.sarks-main-caption > span {
+  color: #e10600 !important;
+  font-weight: 700;
+}

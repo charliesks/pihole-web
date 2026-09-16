@@ -14,9 +14,9 @@ mg.include('scripts/lua/header.lp','r')
     <section>
         <div class="login-logo">
             <div class="text-center">
-                <img src="<?=webhome?>img/sarks-red.png" alt="Sarks Sinkhole" class="loginpage-logo sarks-login-logo" width="140" height="202">
+                <img src="<?=webhome?>img/sarks-blackhole.png" alt="Sarks Sinkhole" class="loginpage-logo sarks-login-logo" width="140" height="202">
             </div>
-            <div class="panel-title text-center"><span class="login-wordmark">Sinkhole</span></div>
+            <div class="panel-title text-center"><span class="login-wordmark">Sarks Sinkhole</span></div>
         </div>
         <!-- /.login-logo -->
 
