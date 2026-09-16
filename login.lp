@@ -10,11 +10,11 @@
 mg.include('scripts/lua/header.lp','r')
 ?>
 <body class="hold-transition layout-boxed login-page page-<?=pihole.format_path(mg.request_info.request_uri)?>" data-apiurl="<?=pihole.api_url()?>" data-webhome="<?=webhome?>">
-<div class="box login-box vista-glow" id="login-box">
+<div class="box login-box sarks-glow" id="login-box">
     <section>
         <div class="login-logo">
             <div class="text-center">
-                <img src="<?=webhome?>img/sarks-logo.png" alt="Sarks Sinkhole" class="loginpage-logo" width="140" height="202">
+                <img src="<?=webhome?>img/sarks-red.png" alt="Sarks Sinkhole" class="loginpage-logo sarks-login-logo" width="140" height="202">
             </div>
             <div class="panel-title text-center"><span class="login-wordmark">Sinkhole</span></div>
         </div>

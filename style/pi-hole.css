@@ -2045,155 +2045,198 @@ textarea.field-sizing-content {
    ========================================================= */
 
    :root {
-    --sarks-dark-red: #7a0000;
-    --sarks-red: #e10600;
+    --sarks-dark-red: #680000;
+    --sarks-red: #c90000;
     --sarks-bright-red: #ff3030;
     --sarks-coral: #ff6257;
+    --sarks-light-red: #ffaaa3;
 }
 
-/* Keep the SARKS logo proportionally sized */
+@property --sarks-glow-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+/* SARKS logo */
 .loginpage-logo.sarks-login-logo {
     display: block;
-    width: min(290px, 75%);
+    width: min(300px, 78%);
     height: auto;
-    margin: 0 auto;
+    max-height: 230px;
+    margin: 0 auto 20px;
     object-fit: contain;
 }
 
-/* Login panel positioning */
-#login-box > section {
-    position: relative;
-    z-index: 0;
-    border-radius: 24px;
-    background: #ffffff;
-}
+/* Complete red animated login frame */
+#login-box.sarks-glow {
+    --sarks-glow-angle: 0deg;
 
-/* Animated red gradient border */
-#login-box > section::before {
-    content: "";
-    position: absolute;
-    z-index: -2;
-    inset: -7px;
-    padding: 7px;
-    border-radius: 30px;
-
-    background: linear-gradient(
-        110deg,
-        var(--sarks-dark-red),
-        var(--sarks-red),
-        var(--sarks-coral),
-        var(--sarks-bright-red),
-        var(--sarks-dark-red)
-    );
-
-    background-size: 350% 350%;
-    animation: sarks-border-shimmer 12s linear infinite;
-
-    box-shadow:
-        0 0 12px rgba(225, 6, 0, 0.70),
-        0 0 28px rgba(255, 48, 48, 0.42),
-        0 0 48px rgba(122, 0, 0, 0.24);
-}
-
-/* White layer prevents the gradient entering the panel */
-#login-box > section::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    border-radius: 24px;
-    background: #ffffff;
-}
-
-@keyframes sarks-border-shimmer {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Full gradient login button */
-#loginform button[type="submit"],
-#loginform .btn-primary {
-    color: #ffffff !important;
+    box-sizing: border-box;
+    padding: 4px !important;
+    overflow: visible !important;
     border: 0 !important;
-    border-radius: 14px !important;
+    border-radius: 22px;
 
-    background: linear-gradient(
-        110deg,
-        var(--sarks-dark-red) 0%,
-        var(--sarks-red) 40%,
-        var(--sarks-bright-red) 72%,
-        var(--sarks-coral) 100%
+    background: conic-gradient(
+        from var(--sarks-glow-angle),
+        #540000 0deg,
+        #8d0000 55deg,
+        #d00000 110deg,
+        #ff3030 165deg,
+        #ff9a93 195deg,
+        #ff3030 225deg,
+        #bd0000 290deg,
+        #540000 360deg
     ) !important;
 
-    box-shadow:
-        0 0 10px rgba(225, 6, 0, 0.60),
-        0 0 22px rgba(255, 48, 48, 0.32) !important;
-
-    transition:
-        transform 180ms ease,
-        box-shadow 180ms ease,
-        filter 180ms ease;
+    animation:
+        sarks-glow-rotate 10s linear infinite,
+        sarks-glow-pulse 4s ease-in-out infinite alternate;
 }
 
-/* Button hover effect—no shimmer */
+/* White center covering the gradient */
+#login-box.sarks-glow > section {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    background: #ffffff !important;
+    border-radius: 18px;
+}
+
+#login-box.sarks-glow .login-logo,
+#login-box.sarks-glow .card,
+#login-box.sarks-glow .login-card-body {
+    background-color: #ffffff;
+}
+
+@keyframes sarks-glow-rotate {
+    from {
+        --sarks-glow-angle: 0deg;
+    }
+
+    to {
+        --sarks-glow-angle: 360deg;
+    }
+}
+
+@keyframes sarks-glow-pulse {
+    from {
+        filter:
+            drop-shadow(0 0 6px rgba(201, 0, 0, 0.35))
+            drop-shadow(0 0 12px rgba(255, 48, 48, 0.25));
+    }
+
+    to {
+        filter:
+            drop-shadow(0 0 13px rgba(225, 6, 0, 0.75))
+            drop-shadow(0 0 25px rgba(255, 48, 48, 0.48));
+    }
+}
+
+/* Full red-gradient login button */
+#loginform .btn.btn-primary[type="submit"],
+#loginform button[type="submit"] {
+    color: #ffffff !important;
+
+    background-color: transparent !important;
+    background-image: linear-gradient(
+        110deg,
+        #680000 0%,
+        #ad0000 28%,
+        #e10600 55%,
+        #ff3030 78%,
+        #ff6257 100%
+    ) !important;
+
+    border: 0 !important;
+    border-radius: 12px !important;
+
+    box-shadow:
+        0 0 9px rgba(201, 0, 0, 0.60),
+        0 0 18px rgba(255, 48, 48, 0.38),
+        0 0 27px rgba(255, 98, 87, 0.22) !important;
+
+    font-weight: 700;
+
+    transition:
+        filter 180ms ease,
+        box-shadow 180ms ease,
+        transform 120ms ease;
+}
+
+#loginform .btn.btn-primary[type="submit"]:hover,
+#loginform .btn.btn-primary[type="submit"]:focus,
 #loginform button[type="submit"]:hover,
-#loginform .btn-primary:hover {
+#loginform button[type="submit"]:focus {
+    color: #ffffff !important;
     filter: brightness(1.12);
     transform: translateY(-1px);
 
     box-shadow:
-        0 0 14px rgba(225, 6, 0, 0.78),
-        0 0 30px rgba(255, 48, 48, 0.46) !important;
+        0 0 13px rgba(201, 0, 0, 0.78),
+        0 0 25px rgba(255, 48, 48, 0.52),
+        0 0 35px rgba(255, 98, 87, 0.30) !important;
 }
 
-#loginform button[type="submit"]:active,
-#loginform .btn-primary:active {
+#loginform .btn.btn-primary[type="submit"]:active,
+#loginform button[type="submit"]:active {
+    filter: brightness(0.96);
     transform: translateY(1px);
 }
 
-/* SARKS status caption */
-.sarks-caption {
+/* SARKS caption */
+.footer-caption.sarks-caption,
+.sidebar-caption.sarks-caption {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
 
-    color: var(--sarks-bright-red) !important;
+    color: var(--sarks-red) !important;
     font-size: 18px;
     font-weight: 700;
 }
 
-/* Gradient status light */
-.sarks-caption .fa-circle {
+/* Full red glowing status indicator */
+.footer-caption.sarks-caption .sarks-indicator,
+.main-sidebar .sidebar-caption.sarks-caption .sarks-indicator {
+    display: inline-block !important;
+    flex: 0 0 16px;
+
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 !important;
+
     color: transparent !important;
+    font-size: 0 !important;
+
     background: linear-gradient(
         135deg,
-        var(--sarks-dark-red),
-        var(--sarks-red),
-        var(--sarks-coral)
-    );
+        #680000 0%,
+        #c90000 40%,
+        #ff3030 72%,
+        #ff6257 100%
+    ) !important;
 
-    width: 16px;
-    height: 16px;
+    border: 0;
     border-radius: 50%;
 
     box-shadow:
-        0 0 8px rgba(225, 6, 0, 0.95),
-        0 0 18px rgba(255, 48, 48, 0.65);
+        0 0 7px rgba(201, 0, 0, 0.90),
+        0 0 14px rgba(255, 48, 48, 0.68),
+        0 0 21px rgba(255, 98, 87, 0.42) !important;
 }
 
-/* Accessibility */
+.sarks-caption > span {
+    color: var(--sarks-red) !important;
+    font-weight: 700;
+}
+
 @media (prefers-reduced-motion: reduce) {
-    #login-box > section::before {
+    #login-box.sarks-glow {
         animation: none;
     }
 
