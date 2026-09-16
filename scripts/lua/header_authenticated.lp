@@ -75,13 +75,33 @@ mg.include('header.lp','r')
                             <!-- Menu Body -->
                             <li class="user-body" id="advanced-info" style="display:none;"></li>
                             <!-- Menu Footer -->
-                            <li class="user-footer">
+                            <!--<li class="user-footer">
                                 <a class="btn-link" href="https://sarks.org/" rel="noopener noreferrer" target="_blank">
                                     <? mg.include('../../img/sarks-blackhole-2.png', 'r') ?>
                                     Sarks Website
                                 </a>
                                 <? if pihole.needLogin() then ?>
-                                <a class="btn-link" href="#" id="logout-button"><i class="fa-fw menu-icon fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+                                <a class="btn-link" href="#" id="logout-button"><i class="fa-fw menu-icon fa-solid fa-arrow-right-from-bracket"></i> Log out</a>-->
+                            <li class="user-footer">
+                                <a class="btn-link"
+                                   href="https://sarks.org/"
+                                   rel="noopener noreferrer"
+                                   target="_blank">
+                                    <img
+                                        class="sarks-menu-icon"
+                                        src="<?=webhome?>img/sarks-blackhole-2.png"
+                                        alt=""
+                                        aria-hidden="true">
+                                    <span>Sarks Website</span>
+                                </a>
+
+                                <? if pihole.needLogin() then ?>
+                                <a class="btn-link" href="#" id="logout-button">
+                                    <i class="fa-fw menu-icon fa-solid fa-arrow-right-from-bracket"></i>
+                                    Log out
+                                </a>
+                                <? end ?>
+                            </li>
                                 <? end ?>
                             </li>
                         </ul>
