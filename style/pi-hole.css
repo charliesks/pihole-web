@@ -1496,6 +1496,7 @@ table.dataTable tbody > tr > .selected {
   display: none !important;
 }
 
+
 .password_background {
   background-image: repeating-linear-gradient(
     45deg,
@@ -2058,13 +2059,15 @@ textarea.field-sizing-content {
     inherits: false;
 }
 
-/* SARKS logo */
-.loginpage-logo.sarks-login-logo {
+/* Crisp vector black-hole logo at the current preferred size */
+.loginpage-logo.sarks-blackhole-logo {
     display: block;
-    width: min(300px, 78%);
-    height: auto;
-    max-height: 230px;
-    margin: 0 auto 20px;
+    width: 220px;
+    height: 220px;
+    max-width: 65%;
+    max-height: none;
+    margin: 18px auto 22px;
+    padding: 0;
     object-fit: contain;
 }
 
@@ -2075,6 +2078,7 @@ textarea.field-sizing-content {
     box-sizing: border-box;
     padding: 4px !important;
     overflow: visible !important;
+
     border: 0 !important;
     border-radius: 22px;
 
@@ -2095,13 +2099,14 @@ textarea.field-sizing-content {
         sarks-glow-pulse 4s ease-in-out infinite alternate;
 }
 
-/* White center covering the gradient */
+/* White center */
 #login-box.sarks-glow > section {
     display: block;
     width: 100%;
     height: 100%;
     padding: 0;
     overflow: hidden;
+
     background: #ffffff !important;
     border-radius: 18px;
 }
@@ -2136,102 +2141,118 @@ textarea.field-sizing-content {
     }
 }
 
-/* Full red-gradient login button */
-#loginform .btn.btn-primary[type="submit"],
-#loginform button[type="submit"] {
+/* Sarks login button */
+#login-box.sarks-glow #loginform .btn-primary {
     color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 14px !important;
 
-    background-color: transparent !important;
+    background-color: #c90000 !important;
     background-image: linear-gradient(
         110deg,
         #680000 0%,
-        #ad0000 28%,
-        #e10600 55%,
-        #ff3030 78%,
+        #c00000 28%,
+        #e10600 58%,
+        #ff3030 80%,
         #ff6257 100%
     ) !important;
 
-    border: 0 !important;
-    border-radius: 12px !important;
-
     box-shadow:
-        0 0 9px rgba(201, 0, 0, 0.60),
-        0 0 18px rgba(255, 48, 48, 0.38),
-        0 0 27px rgba(255, 98, 87, 0.22) !important;
+        0 0 10px rgba(225, 6, 0, 0.60),
+        0 0 22px rgba(255, 48, 48, 0.32) !important;
 
     font-weight: 700;
 
     transition:
-        filter 180ms ease,
+        transform 180ms ease,
         box-shadow 180ms ease,
-        transform 120ms ease;
+        filter 180ms ease;
 }
 
-#loginform .btn.btn-primary[type="submit"]:hover,
-#loginform .btn.btn-primary[type="submit"]:focus,
-#loginform button[type="submit"]:hover,
-#loginform button[type="submit"]:focus {
+/* Keep hover red */
+#login-box.sarks-glow #loginform .btn-primary:hover,
+#login-box.sarks-glow #loginform .btn-primary:focus {
     color: #ffffff !important;
-    filter: brightness(1.12);
+
+    background-color: #c90000 !important;
+    background-image: linear-gradient(
+        110deg,
+        #680000 0%,
+        #b50000 28%,
+        #e10600 58%,
+        #ff3030 80%,
+        #ff6257 100%
+    ) !important;
+
+    filter: brightness(1.08);
     transform: translateY(-1px);
 
     box-shadow:
-        0 0 13px rgba(201, 0, 0, 0.78),
-        0 0 25px rgba(255, 48, 48, 0.52),
-        0 0 35px rgba(255, 98, 87, 0.30) !important;
+        0 0 14px rgba(201, 0, 0, 0.82),
+        0 0 28px rgba(255, 48, 48, 0.52) !important;
 }
 
-#loginform .btn.btn-primary[type="submit"]:active,
-#loginform button[type="submit"]:active {
-    filter: brightness(0.96);
+#login-box.sarks-glow #loginform .btn-primary:active {
+    background-color: #b50000 !important;
+    background-image: linear-gradient(
+        110deg,
+        #580000,
+        #b50000,
+        #e10600,
+        #ff3030
+    ) !important;
+
     transform: translateY(1px);
+    filter: brightness(0.98);
 }
 
-/* SARKS caption */
-.footer-caption.sarks-caption,
-.sidebar-caption.sarks-caption {
+/* Main Sinkhole caption */
+.footer-caption.main-caption,
+.sidebar-caption.main-caption {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
 
-    color: var(--sarks-red) !important;
-    font-size: 18px;
+    color: #e10600 !important;
     font-weight: 700;
 }
 
-/* Full red glowing status indicator */
-.footer-caption.sarks-caption .sarks-indicator,
-.main-sidebar .sidebar-caption.sarks-caption .sarks-indicator {
+/* Red Main Sinkhole indicator */
+.footer-caption.main-caption .main-indicator,
+.main-sidebar .sidebar-caption.main-caption .main-indicator {
     display: inline-block !important;
-    flex: 0 0 16px;
+    flex: 0 0 17px;
 
-    width: 16px !important;
-    height: 16px !important;
+    width: 17px !important;
+    height: 17px !important;
     margin: 0 !important;
 
     color: transparent !important;
     font-size: 0 !important;
 
-    background: linear-gradient(
+    background-color: #c90000 !important;
+    background-image: linear-gradient(
         135deg,
         #680000 0%,
-        #c90000 40%,
+        #c90000 38%,
         #ff3030 72%,
         #ff6257 100%
     ) !important;
 
-    border: 0;
-    border-radius: 50%;
+    border: 0 !important;
+    border-radius: 50% !important;
 
     box-shadow:
-        0 0 7px rgba(201, 0, 0, 0.90),
-        0 0 14px rgba(255, 48, 48, 0.68),
-        0 0 21px rgba(255, 98, 87, 0.42) !important;
+        0 0 6px rgba(201, 0, 0, 0.95),
+        0 0 13px rgba(255, 48, 48, 0.75),
+        0 0 21px rgba(255, 98, 87, 0.48) !important;
+
+    filter: none !important;
 }
 
-.sarks-caption > span {
-    color: var(--sarks-red) !important;
+.main-caption > span {
+    color: #e10600 !important;
     font-weight: 700;
 }
 
@@ -2240,144 +2261,7 @@ textarea.field-sizing-content {
         animation: none;
     }
 
-    #loginform button[type="submit"] {
+    #login-box.sarks-glow #loginform .btn-primary {
         transition: none;
     }
-}
-
-/* =========================================================
-   Final SARKS login overrides
-   Keep at the end of pi-hole.css
-   ========================================================= */
-
-/* Symbol-only black-hole logo */
-.loginpage-logo.sarks-blackhole-logo {
-  display: block;
-  width: 150px;
-  height: auto;
-  max-height: 180px;
-  margin: 24px auto 22px;
-  padding: 0;
-  object-fit: contain;
-}
-
-/* Force red login button in its normal state */
-#login-box.sarks-glow
-#loginform .btn.btn-primary[type="submit"] {
-  color: #ffffff !important;
-
-  background-color: #c90000 !important;
-  background-image: linear-gradient(
-      110deg,
-      #680000 0%,
-      #ad0000 28%,
-      #e10600 55%,
-      #ff3030 78%,
-      #ff6257 100%
-  ) !important;
-
-  border: 0 !important;
-  border-radius: 12px !important;
-
-  box-shadow:
-      0 0 9px rgba(201, 0, 0, 0.60),
-      0 0 18px rgba(255, 48, 48, 0.38),
-      0 0 27px rgba(255, 98, 87, 0.22) !important;
-
-  font-weight: 700;
-
-  transition:
-      filter 180ms ease,
-      box-shadow 180ms ease,
-      transform 120ms ease;
-}
-
-/* Override the old Vista cyan/green hover */
-#login-box.sarks-glow
-#loginform .btn.btn-primary[type="submit"]:hover,
-#login-box.sarks-glow
-#loginform .btn.btn-primary[type="submit"]:focus {
-  color: #ffffff !important;
-
-  background-color: #e10600 !important;
-  background-image: linear-gradient(
-      110deg,
-      #7a0000 0%,
-      #c00000 28%,
-      #f00000 58%,
-      #ff3b34 80%,
-      #ff746b 100%
-  ) !important;
-
-  filter: brightness(1.08);
-  transform: translateY(-1px);
-
-  box-shadow:
-      0 0 13px rgba(201, 0, 0, 0.82),
-      0 0 25px rgba(255, 48, 48, 0.55),
-      0 0 35px rgba(255, 98, 87, 0.32) !important;
-}
-
-/* Keep it red while pressed */
-#login-box.sarks-glow
-#loginform .btn.btn-primary[type="submit"]:active {
-  color: #ffffff !important;
-
-  background-color: #b00000 !important;
-  background-image: linear-gradient(
-      110deg,
-      #570000 0%,
-      #a00000 35%,
-      #d90000 68%,
-      #ff3030 100%
-  ) !important;
-
-  filter: brightness(0.96);
-  transform: translateY(1px);
-}
-
-/* Main Sinkhole caption alignment */
-.footer-caption.sarks-main-caption {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-
-  color: #e10600 !important;
-  font-weight: 700;
-}
-
-/* Red Main Sinkhole indicator */
-.footer-caption.sarks-main-caption .sarks-main-indicator {
-  display: inline-block !important;
-  flex: 0 0 16px;
-
-  width: 16px !important;
-  height: 16px !important;
-  margin: 0 !important;
-
-  color: transparent !important;
-  font-size: 0 !important;
-
-  background: linear-gradient(
-      135deg,
-      #680000 0%,
-      #c90000 40%,
-      #ff3030 72%,
-      #ff6257 100%
-  ) !important;
-
-  border: 0 !important;
-  border-radius: 50%;
-
-  box-shadow:
-      0 0 7px rgba(201, 0, 0, 0.95),
-      0 0 14px rgba(255, 48, 48, 0.72),
-      0 0 22px rgba(255, 98, 87, 0.46) !important;
-}
-
-/* Red Main Sinkhole wording */
-.footer-caption.sarks-main-caption > span {
-  color: #e10600 !important;
-  font-weight: 700;
 }
