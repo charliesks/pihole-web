@@ -67,7 +67,7 @@ mg.include('header.lp','r')
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img class="logo-img" src="<?=webhome?>img/sarks-blackhole-2.png" alt="Pi-hole Logo" width="50" height="50">
+                                <img class="logo-img" src="<?=webhome?>img/sarks-blackkhole-2.png" alt="Pi-hole Logo" width="50" height="50">
                                 <p>
                                     Sarks Ad Blocker
                                 </p>
