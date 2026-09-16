@@ -67,7 +67,7 @@ mg.include('header.lp','r')
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img class="logo-img" src="<?=webhome?>img/sarks-blackkhole-2.png" alt="Pi-hole Logo" width="50" height="50">
+                                <img class="logo-img" src="<?=webhome?>img/sarks-blackhole-2.png" alt="Pi-hole Logo" width="50" height="50">
                                 <p>
                                     Sarks Ad Blocker
                                 </p>
@@ -77,7 +77,7 @@ mg.include('header.lp','r')
                             <!-- Menu Footer -->
                             <li class="user-footer">
                                 <a class="btn-link" href="https://sarks.org/" rel="noopener noreferrer" target="_blank">
-                                    <? mg.include('../../img/sarks-blachole-2.png', 'r') ?>
+                                    <? mg.include('../../img/sarks-blackhole-2.png', 'r') ?>
                                     Sarks Website
                                 </a>
                                 <? if pihole.needLogin() then ?>
