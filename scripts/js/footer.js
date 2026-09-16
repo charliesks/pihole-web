@@ -248,23 +248,23 @@ function updateFtlInfo() {
       $("#num_lists").text(intl.format(database.lists));
       $("#num_gravity").text(intl.format(database.gravity));
       $("#num_allowed")
-        .text(intl.format(database.domains.allowed + database.regex.allowed))
+        .text(intl.format(database.domains.allowed + (database.regex?.allowed ?? 0)))
         .attr(
           "title",
           "Allowed: " +
             intl.format(database.domains.allowed) +
             " exact domains and " +
-            intl.format(database.regex.allowed) +
+            intl.format(intl.format(database.regex?.allowed ?? 0)) +
             " regex filters are enabled"
         );
       $("#num_denied")
-        .text(intl.format(database.domains.denied + database.regex.denied))
+        .text(intl.format(database.domains.denied + (database.regex?.denied ?? 0)))
         .attr(
           "title",
           "Denied: " +
             intl.format(database.domains.denied) +
             " exact domains and " +
-            intl.format(database.regex.denied) +
+            intl.format(database.regex?.denied ?? 0) +
             " regex filters are enabled"
         );
       updateQueryFrequency(intl, ftl.query_frequency);
