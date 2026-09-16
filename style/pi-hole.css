@@ -2314,57 +2314,80 @@ textarea.field-sizing-content {
   object-fit: contain;
 }
 /* =========================================================
-   Final Backup Sinkhole state
-   Keep this at the end of pi-hole.css
-   ========================================================= */
+Final Backup Sinkhole state
+Keep this at the end of pi-hole.css
+========================================================= */
 
-   body .footer-caption.backup-caption,
-   body .main-sidebar .sidebar-caption.backup-caption {
-       display: inline-flex !important;
-       align-items: center;
-       justify-content: center;
-       gap: 12px;
-   
-       color: #e6a700 !important;
-       font-weight: 700 !important;
-   }
-   
-   /* Full yellow/orange backup-state light */
-   body .footer-caption.backup-caption .backup-indicator,
-   body .main-sidebar .sidebar-caption.backup-caption .backup-indicator {
-       display: inline-block !important;
-       flex: 0 0 17px !important;
-   
-       width: 17px !important;
-       height: 17px !important;
-       margin: 0 !important;
-   
-       color: transparent !important;
-       font-size: 0 !important;
-   
-       background-color: #ffb300 !important;
-       background-image: linear-gradient(
-           135deg,
-           #cc7600 0%,
-           #ff9800 30%,
-           #ffc107 62%,
-           #fff176 100%
-       ) !important;
-   
-       border: 0 !important;
-       border-radius: 50% !important;
-   
-       box-shadow:
-           0 0 6px rgba(255, 152, 0, 0.95),
-           0 0 13px rgba(255, 193, 7, 0.80),
-           0 0 21px rgba(255, 215, 64, 0.55) !important;
-   
-       filter: none !important;
-   }
-   
-   /* Yellow backup-state wording */
-   body .footer-caption.backup-caption > span,
-   body .main-sidebar .sidebar-caption.backup-caption > span {
-       color: #e6a700 !important;
-       font-weight: 700 !important;
-   }
+body .footer-caption.backup-caption,
+body .main-sidebar .sidebar-caption.backup-caption {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    color: #e6a700 !important;
+    font-weight: 700 !important;
+}
+
+/* Full yellow/orange backup-state light */
+body .footer-caption.backup-caption .backup-indicator,
+body .main-sidebar .sidebar-caption.backup-caption .backup-indicator {
+    display: inline-block !important;
+    flex: 0 0 17px !important;
+
+    width: 17px !important;
+    height: 17px !important;
+    margin: 0 !important;
+
+    color: transparent !important;
+    font-size: 0 !important;
+
+    background-color: #ffb300 !important;
+    background-image: linear-gradient(
+        135deg,
+        #cc7600 0%,
+        #ff9800 30%,
+        #ffc107 62%,
+        #fff176 100%
+    ) !important;
+
+    border: 0 !important;
+    border-radius: 50% !important;
+
+    box-shadow:
+        0 0 6px rgba(255, 152, 0, 0.95),
+        0 0 13px rgba(255, 193, 7, 0.80),
+        0 0 21px rgba(255, 215, 64, 0.55) !important;
+
+    filter: none !important;
+}
+
+/* Yellow backup-state wording */
+body .footer-caption.backup-caption > span,
+body .main-sidebar .sidebar-caption.backup-caption > span {
+    color: #e6a700 !important;
+    font-weight: 700 !important;
+}
+/* Sarks login logo animation */
+.sarks-login-logo {
+  display: inline-block;
+  animation: sarks-logo-spin 18s linear infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+@keyframes sarks-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sarks-login-logo {
+        animation: none;
+    }
+}
